@@ -1,0 +1,335 @@
+/* ============================================================
+   Eternal Bloom â UFT-EB Website Stylesheet
+   Design: Academic warmth â serif type, earth tones, clean cards
+   ============================================================ */
+
+:root {
+  --bg: #faf8f4;
+  --bg-dark: #1a1a2e;
+  --bg-hero: #0f0f1e;
+  --text: #2c2c2c;
+  --text-light: #6b6b6b;
+  --text-on-dark: #e8e4dc;
+  --accent: #c4723a;
+  --accent-hover: #a85d2d;
+  --green: #4a6741;
+  --green-light: #5a7a50;
+  --gold: #c9a84c;
+  --border: #d4cfc6;
+  --card-bg: #ffffff;
+  --card-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  --serif: 'Georgia', 'Times New Roman', serif;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --mono: 'SF Mono', 'Fira Code', monospace;
+  --max-width: 1100px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--serif);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+/* ---- NAVIGATION ---- */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 0.6rem 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+}
+nav .logo {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--green);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+nav .nav-links { display: flex; gap: 1.8rem; }
+nav .nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+nav .nav-links a:hover, nav .nav-links a.active {
+  color: var(--accent);
+}
+
+/* ---- HERO ---- */
+.hero {
+  background: var(--bg-hero);
+  color: var(--text-on-dark);
+  padding: 5rem 2rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 30%, rgba(74,103,65,0.25) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 70%, rgba(196,114,58,0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+.hero h1 span { color: var(--gold); }
+.hero .subtitle {
+  font-size: 1.15rem;
+  color: rgba(232,228,220,0.75);
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  font-style: italic;
+  position: relative;
+}
+.hero .cta-row {
+  display: flex; gap: 1rem; justify-content: center;
+  position: relative;
+}
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  border-radius: 4px;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-outline { background: transparent; color: var(--text-on-dark); border: 1px solid rgba(232,228,220,0.4); }
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ---- SECTIONS ---- */
+.section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+.section-label {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--green);
+  margin-bottom: 0.5rem;
+}
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.25;
+}
+.section p {
+  max-width: 750px;
+  margin-bottom: 1.2rem;
+}
+
+/* ---- CARDS ---- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+.card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+  color: var(--green);
+}
+.card p {
+  font-size: 0.92rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* ---- EQUATIONS ---- */
+.equation-block {
+  background: #f5f3ee;
+  border-left: 3px solid var(--green);
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  overflow-x: auto;
+}
+.equation-label {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+  font-style: normal;
+}
+
+/* ---- GALLERY ---- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.gallery-item {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: relative;
+}
+.gallery-item:hover { transform: scale(1.02); }
+.gallery-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.gallery-item .caption {
+  padding: 0.6rem 0.8rem;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--text-light);
+  background: var(--card-bg);
+}
+
+/* ---- TIMELINE ---- */
+.timeline {
+  position: relative;
+  padding-left: 2.5rem;
+  margin-top: 2rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0.6rem; top: 0; bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2rem; top: 0.4rem;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+}
+.timeline-date {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
+}
+.timeline-item h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+}
+.timeline-item p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* ---- COMPARISON TABLE ---- */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.85rem;
+  font-family: var(--sans);
+}
+.comparison-table th {
+  background: var(--green);
+  color: #fff;
+  padding: 0.7rem 0.8rem;
+  text-align: left;
+  font-weight: 600;
+}
+.comparison-table td {
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+}
+.comparison-table tr:nth-child(even) td { background: #f9f7f3; }
+.comparison-table .check { color: var(--green); font-weight: 700; }
+.comparison-table .cross { color: #b44; font-weight: 700; }
+.comparison-table .partial { color: var(--gold); font-weight: 700; }
+
+/* ---- FOOTER ---- */
+footer {
+  background: var(--bg-dark);
+  color: rgba(232,228,220,0.6);
+  padding: 3rem 2rem;
+  text-align: center;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+}
+footer a { color: var(--gold); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+footer .footer-links { margin-bottom: 1rem; display: flex; gap: 2rem; justify-content: center; }
+
+/* ---- LIGHTBOX ---- */
+.lightbox-overlay {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 1000;
+  align-items: center; justify-content: center;
+  cursor: pointer;
+}
+.lightbox-overlay.active { display: flex; }
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 85vh;
+  border-radius: 6px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .hero .subtitle { font-size: 1rem; }
+  nav { flex-direction: column; gap: 0.5rem; }
+  nav .nav-links { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+  .card-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .comparison-table { font-size: 0.75rem; }
+}
