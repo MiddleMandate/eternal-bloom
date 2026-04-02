@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repository â Eternal Bloom (UFT-EB)</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Eternal Bloom</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="theory.html">Theory</a>
+    <a href="paper.html">Paper</a>
+    <a href="repository.html" class="active">Repository</a>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+
+<section class="section" style="padding-top: 3rem;">
+  <p class="section-label">Data &amp; Visualizations</p>
+  <h2>Repository</h2>
+  <p>Simulation outputs, visualizations, code, and supporting data for the Unified Field Theory of Eternal Bloom. All materials are organized by category. Click any image to view full size.</p>
+
+  <!-- Category: Collapse Fields -->
+  <h3 style="margin-top: 3rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--green);">Collapse Field Visualizations</h3>
+  <p>3D isosurfaces and 2D maps of the decoherence potential &Xi;(x,y,&tau;) and collapse shell dynamics.</p>
+  <div class="gallery-grid">
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="images/3d_collapse_shell.png" alt="3D Collapse Shell" loading="lazy">
+      <div class="caption">3D Collapse Shell</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="images/xi_isosurface.png" alt="Xi Isosurface" loading="lazy">
+      <div class="caption">&Xi;(x,y,&tau;) &mdash; 3D Isosurface of Bloom Collapse Field</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="images/psi_echo.png" alt="Psi Echo After Collapse" loading="lazy">
+      <div class="caption">&Psi; Echo After Collapse</div>
+    </div>
+  </div>
+
+  <!-- Category: BEC Simulations -->
+  <h3 style="margin-top: 3rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--green);">BEC Phase Simulations</h3>
+  <p>Calibrated Bose-Einstein condensate phase diagrams comparing Bloom threshold collapse with GRW stochastic predictions.</p>
+  <div class="gallery-grid">
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="images/BEC_phase_bloom_calibrated.png" alt="BEC Phase - Bloom" loading="lazy">
+      <div class="caption">BEC Phase Diagram &mdash; Bloom Model</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="images/BEC_phase_grw_calibrated.png" alt="BEC Phase - GRW" loading="lazy">
+      <div class="caption">BEC Phase Diagram &mdash; GRW Model</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="images/BEC_post_increments_bloom_calibrated.png" alt="BEC Post Increments" loading="lazy">
+      <div class="caption">BEC Post-Increment Analysis &mdash; Bloom</div>
+    </div>
+  </div>
+
+  <!-- Category: Attractor Dynamics -->
+  <h3 style="margin-top: 3rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--green);">Attractor Dynamics</h3>
+  <p>Analysis of attractor persistence, frequency, and longevity under decoherence drift and &Xi; feedback.</p>
+  <div class="gallery-grid">
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="images/attractor_persistence.png" alt="Attractor Persistence" loading="lazy">
+      <div class="caption">Attractor Persistence under &Xi; Feedback</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="images/attractor_frequencies.png" alt="Attractor Frequencies" loading="lazy">
+      <div class="caption">Attractor Frequencies Under Decoherence Drift</div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="images/attractor_longevity.png" alt="Attractor Longevity" loading="lazy">
+      <div class="caption">Attractor Longevity (Stable in All Layers)</div>
+    </div>
+  </div>
+
+  <!-- Category: Power Spectra & Curvature -->
+  <h3 style="margin-top: 3rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--green);">Power Spectra &amp; Informational Curvature</h3>
+  <p>Spectral analysis of the coherence field and curvature maps derived from the Bloom Field Equation.</p>
+  <div class="gallery-grid">
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="images/2d_power_spectrum.png" alt="2D Power Spectrum" loading="lazy">
+      <div class="caption">2D Power Spectrum of &Xi;(x,y) from Quasiperiodic &Phi;(t)</div>
+    </div>
+  </div>
+
+  <!-- Category: Simulation Code -->
+  <h3 style="margin-top: 3rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--green);">Simulation Code</h3>
+  <p>Source code for the Qiskit quantum circuit simulations and lattice coherence dynamics.</p>
+  <div class="card-grid" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="card">
+      <h3>Phi Threshold Simulation</h3>
+      <p>Python/Qiskit script implementing the 6-qubit entangling circuit with thermal noise model and &Phi; threshold detection. Confirms &Phi;<sub>c</sub> &asymp; 1.5.</p>
+      <p style="font-family: var(--mono); font-size: 0.8rem; margin-top: 0.5rem; color: var(--accent);">uft-eb_phi_threshold_simulation_clean.py</p>
+    </div>
+    <div class="card">
+      <h3>Lattice BFE Notebook</h3>
+      <p>Jupyter notebook implementing 20&times;20 lattice coherence dynamics, Laplacian curvature extraction, BFE residuals, and predictive anomaly maps.</p>
+      <p style="font-family: var(--mono); font-size: 0.8rem; margin-top: 0.5rem; color: var(--accent);">Bloom_UFT-EB_Simulation_REAL_FIXED.ipynb</p>
+    </div>
+  </div>
+
+  <!-- Full Archive Notice -->
+  <div class="card" style="margin-top: 3rem; background: #f5f3ee; border-color: var(--green);">
+    <h3 style="color: var(--text);">Full Archive</h3>
+    <p>The complete repository contains <strong>308 visualizations</strong> and <strong>134 document files</strong> including multiple paper drafts, simulation notebooks, supporting PDFs, and ZIP archives. The full archive will be made available through the project's GitHub repository.</p>
+    <a href="https://github.com" class="btn btn-primary" style="margin-top: 1rem; font-size: 0.85rem;">GitHub Repository (Coming Soon)</a>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="theory.html">Theory</a>
+    <a href="paper.html">Paper</a>
+    <a href="about.html">About</a>
+  </div>
+  <p>Unified Field Theory of Eternal Bloom &copy; 2026 Alexander T. Sherrod</p>
+</footer>
+
+<script>
+function openLightbox(el) {
+  const img = el.querySelector('img');
+  document.getElementById('lightbox-img').src = img.src;
+  document.getElementById('lightbox').classList.add('active');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+
+</body>
+</html>
