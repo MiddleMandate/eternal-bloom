@@ -33,10 +33,17 @@
   <h3 style="margin-top: 2.5rem;">The Measurement Problem</h3>
   <p>When does a quantum system stop being "both here and there" and commit to one definite state? This is the measurement problem, and it has haunted physics since the 1920s. The standard answer is that an observer or measurement device causes the transition, but no one has ever specified exactly what counts as a "measurement" or why it should have such dramatic effects.</p>
 
-  <p>Various theories have tried to fix this. The GRW and CSL models say collapse happens randomly, governed by a universal noise field. Penrose says gravity itself forces collapse when mass configurations diverge too much. The Many-Worlds interpretation says collapse never happens at all. Each captures something important, but none provides a complete, testable, observer-independent account of when and why the quantum world becomes the classical one.</p>
+  <p>Various theories have tried to fix this. The GRW and CSL models say collapse happens randomly, governed by a universal noise field. Penrose and Di&oacute;si say gravity itself forces collapse when mass configurations diverge too much. The Many-Worlds interpretation says collapse never happens at all. Each captures something important, but none provides a complete, testable, observer-independent account of when and why the quantum world becomes the classical one.</p>
 
   <h3 style="margin-top: 2.5rem;">The Bloom Mechanism</h3>
-  <p>UFT-EB takes a different approach. It defines a precise, calculable quantity called $\Phi$ that measures the <em>informational coherence</em> of a quantum system. $\Phi$ combines three ingredients:</p>
+  <p>UFT-EB takes a different approach. The full informational evolution of a quantum system is governed by the root equation, which integrates local coherence measures across space:</p>
+
+  <div class="equation-block">
+    <div class="equation-label">Root Equation &mdash; Informational Evolution</div>
+    $$\Omega(\tau) = \Psi_0 + \int \mathcal{I}(\nabla\Psi(x,\tau)) \cdot \Phi(x,\tau) \cdot e^{-\Xi(x,\tau)} \, d^3x$$
+  </div>
+
+  <p>The key quantity within this integral is $\Phi$, a precise, calculable measure of a system's <em>informational coherence</em>. $\Phi$ combines three ingredients:</p>
 
   <div class="card-grid" style="grid-template-columns: repeat(3, 1fr);">
     <div class="card">
@@ -53,7 +60,7 @@
     </div>
   </div>
 
-  <p style="margin-top: 1.5rem;">When $\Phi$ crosses the critical threshold $\Phi_c$, the system collapses from quantum superposition to classical definiteness. This is not random, not observer-dependent, and not a matter of interpretation. It is a deterministic consequence of the system's own informational state.</p>
+  <p style="margin-top: 1.5rem;">When $\Phi$ crosses the critical threshold $\Phi_c$, the system collapses from quantum superposition to classical definiteness. The <em>trigger condition</em> is deterministic: given complete knowledge of the density matrix, entropy, mutual information, and decoherence potential, the collapse point is calculable. The collapse <em>dynamics</em>, however, include a stochastic component&mdash;a light-cone-localized noise coupling that ensures Born-rule probabilities emerge correctly while preserving relativistic causality. This distinguishes UFT-EB from purely stochastic models (GRW, CSL) where both the trigger and the process are random, and from Copenhagen where the trigger is observer-dependent.</p>
 
   <p>We call each collapse event a <strong>"bloom"</strong> because it represents the flowering of classical definiteness from quantum possibility. The universe is in a state of perpetual bloom.</p>
 
@@ -106,11 +113,13 @@
 <footer>
   <div class="footer-links">
     <a href="index.html">Home</a>
+    <a href="theory.html">Theory</a>
     <a href="paper.html">Paper</a>
     <a href="repository.html">Repository</a>
     <a href="about.html">About</a>
   </div>
   <p>Unified Field Theory of Eternal Bloom &copy; 2026 Alexander T. Sherrod</p>
+  <p style="margin-top: 0.5rem; font-size: 0.78rem;">Independent Research &middot; <a href="mailto:connect@alexandersherrod.com">connect@alexandersherrod.com</a></p>
 </footer>
 
 </body>
