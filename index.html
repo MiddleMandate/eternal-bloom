@@ -62,7 +62,7 @@
   <div style="max-width: var(--max-width); margin: 0 auto;">
     <p class="section-label">Mathematics</p>
     <h2>The Core Equations</h2>
-    <p>Three equations define the framework. Each is derived from first principles and makes specific, testable predictions.</p>
+    <p>Four equations define the framework. Each is derived from first principles and makes specific, testable predictions.</p>
 
     <div class="equation-block">
       <div class="equation-label">Root Equation &mdash; Informational Evolution</div>
@@ -76,7 +76,7 @@
 
     <div class="equation-block">
       <div class="equation-label">Collapse Threshold Condition</div>
-      $$\bar{H}(\Delta\Psi_i) \geq \Phi_t = \frac{1}{V}\int_V \left[S(\rho) + I(\rho_A:\rho_B) - \Xi\right] d^3x$$
+      $$\bar{H}(\Delta\Psi_i) \geq \Phi_c = \frac{1}{V}\int_V \left[S(\rho) + I(\rho_A:\rho_B) - \Xi\right] d^3x$$
     </div>
 
     <div class="equation-block">
@@ -97,8 +97,9 @@
       <tr>
         <th>Feature</th>
         <th>UFT-EB</th>
-        <th>GRW/CSL</th>
-        <th>Penrose-Diosi</th>
+        <th>GRW</th>
+        <th>CSL</th>
+        <th>Penrose-Di&oacute;si</th>
         <th>Many-Worlds</th>
       </tr>
     </thead>
@@ -106,6 +107,7 @@
       <tr>
         <td>Collapse mechanism</td>
         <td>Info threshold</td>
+        <td>Stochastic</td>
         <td>Stochastic</td>
         <td>Gravitational</td>
         <td>None</td>
@@ -116,10 +118,12 @@
         <td class="check">Yes</td>
         <td class="check">Yes</td>
         <td class="check">Yes</td>
+        <td class="check">Yes</td>
       </tr>
       <tr>
         <td>Deterministic trigger</td>
         <td class="check">Yes</td>
+        <td class="cross">No</td>
         <td class="cross">No</td>
         <td class="partial">Partial</td>
         <td>N/A</td>
@@ -128,21 +132,40 @@
         <td>Connects to GR</td>
         <td class="check">Yes</td>
         <td class="cross">No</td>
+        <td class="cross">No</td>
         <td class="partial">Partial</td>
         <td class="cross">No</td>
       </tr>
       <tr>
+        <td>Free parameters</td>
+        <td>&tau;, &Phi;<sub>c</sub>(n), &gamma;</td>
+        <td>&lambda;, r<sub>C</sub></td>
+        <td>&lambda;, r<sub>C</sub></td>
+        <td>None*</td>
+        <td>None</td>
+      </tr>
+      <tr>
         <td>Covariant formulation</td>
-        <td class="check">Yes</td>
+        <td class="partial">Proposed</td>
         <td class="partial">Partial</td>
         <td class="partial">Partial</td>
+        <td class="partial">Partial</td>
         <td class="check">Yes</td>
+      </tr>
+      <tr>
+        <td>Energy conservation</td>
+        <td class="partial">In expectation</td>
+        <td class="cross">Violated</td>
+        <td class="cross">Violated</td>
+        <td class="partial">In expectation</td>
+        <td class="check">Exact</td>
       </tr>
       <tr>
         <td>Falsifiable predictions</td>
         <td class="check">Multiple</td>
         <td class="partial">Limited</td>
         <td class="partial">Limited</td>
+        <td class="check">Tested</td>
         <td class="cross">None</td>
       </tr>
       <tr>
@@ -151,9 +174,11 @@
         <td class="cross">None</td>
         <td class="cross">None</td>
         <td class="cross">None</td>
+        <td class="cross">None</td>
       </tr>
     </tbody>
   </table>
+  <p style="font-size: 0.8rem; color: var(--text-light); margin-top: 0.5rem;">*Penrose-Di&oacute;si has no adjustable parameters but lacks a complete dynamical formulation.</p>
 </section>
 
 <!-- Timeline -->
@@ -181,7 +206,7 @@
       <div class="timeline-item">
         <div class="timeline-date">January 2026</div>
         <h3>Adversarial Stress Testing</h3>
-        <p>Theory subjected to hostile referee simulations and comparative analysis against CSL, GRW, Penrose-Diosi, and other frameworks. Gravity-as-data-compression formulation refined.</p>
+        <p>Theory subjected to hostile referee simulations and comparative analysis against CSL, GRW, Penrose-Di&oacute;si, and other frameworks. Gravity-as-data-compression formulation refined.</p>
       </div>
       <div class="timeline-item">
         <div class="timeline-date">February 2026</div>
@@ -215,6 +240,7 @@
 <!-- Footer -->
 <footer>
   <div class="footer-links">
+    <a href="index.html">Home</a>
     <a href="theory.html">Theory</a>
     <a href="paper.html">Paper</a>
     <a href="repository.html">Repository</a>
